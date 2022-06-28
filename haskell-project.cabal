@@ -25,6 +25,8 @@ source-repository head
 
 library
   exposed-modules:
+      Hw1Exercise1
+      IntroductionToHaskell
       Lib
   other-modules:
       Paths_haskell_project
