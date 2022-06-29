@@ -1,6 +1,7 @@
 module Main where
 import IntroductionToHaskell
-import Hw1Exercise1
+import Homework2
+
 main :: IO ()
 main = do 
     print(toDigits(0))
