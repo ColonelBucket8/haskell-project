@@ -19,5 +19,11 @@ doubleEveryOther (x:y:xs) = x : y * 2 : doubleEveryOther xs
 doubleEveryOther a = a
 
 -- sum of all digits in a list 
+-- map :: Integer -> [Integer] 
 sumDigits :: [Integer] -> Integer
-sumDigits (x:xs)  = sum(x:xs)
+sumDigits = sum . map (sum . toDigits)
+
+-- Validate credit card number
+validate :: Integer -> Bool
+validate creditCardNumber = sumDigits (doubleEveryOther (toDigitsRev creditCardNumber)) `mod` 10 == 0
+

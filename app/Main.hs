@@ -11,4 +11,5 @@ main = do
     print(toDigitsRev(-1))
     print(doubleEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9]))
     print(sumDigits([1, 2, 3, 4, 5, 6, 11]))
+    print(validate 4012888888881881)
 
