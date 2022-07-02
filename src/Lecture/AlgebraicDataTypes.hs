@@ -1,4 +1,4 @@
-module AlgebraicDataTypes where
+module Lecture.AlgebraicDataTypes where
 
 -- Enumeration Types
 -- The deriving Show is a magical incantation which tells GHC to automatically generate default code for converting Things to Strings. This is what ghci uses when printing the value of an expression of type thing

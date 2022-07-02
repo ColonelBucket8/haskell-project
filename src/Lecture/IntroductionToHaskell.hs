@@ -1,4 +1,4 @@
-module IntroductionToHaskell where
+module Lecture.IntroductionToHaskell where
 
 -- initialize variable
 x :: Int

@@ -1,4 +1,4 @@
-module Homework1 where
+module Homework.Homework1 where
 
 -- convert digits to list
 -- zero and negative numbers return empty list

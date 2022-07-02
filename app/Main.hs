@@ -1,9 +1,11 @@
 module Main where
-import IntroductionToHaskell
-import Homework1
-import AlgebraicDataTypes
+import Lecture.IntroductionToHaskell
+import Lecture.AlgebraicDataTypes
+
+import Homework.Homework1
 
 main :: IO ()
 main = do 
+    print(hanoi 3 "a" "c" "b")
     print(getAge brent)
      
