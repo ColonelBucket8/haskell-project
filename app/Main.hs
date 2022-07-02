@@ -5,5 +5,5 @@ import AlgebraicDataTypes
 
 main :: IO ()
 main = do 
-    print(isSmall Ship)
+    print(getAge brent)
      
