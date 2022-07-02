@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      AlgebraicDataTypes
       Homework1
       IntroductionToHaskell
       Lib

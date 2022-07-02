@@ -1,8 +1,9 @@
 module Main where
 import IntroductionToHaskell
 import Homework1
+import AlgebraicDataTypes
 
 main :: IO ()
 main = do 
-    print(hanoi 5 "a" "c" "b")
+    print(isSmall Ship)
      
