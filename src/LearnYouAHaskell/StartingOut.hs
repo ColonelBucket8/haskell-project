@@ -10,7 +10,7 @@ numbersFromTo :: Integer -> Integer -> [Integer]
 numbersFromTo start end = [x | x <- [start..end], x /= 13, x /= 15, x /= 19]
 
 -- Return the length of list
-length' :: [Integer] -> Integer
+length' :: [a] -> Integer
 length' xs = sum [1 | _ <- xs]
 
 -- else is mandatory in Haskell
