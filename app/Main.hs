@@ -6,8 +6,10 @@ import Homework.Homework1
 
 main :: IO ()
 main = do 
-    print(hanoi 3 "a" "c" "b")
-    print(hanoi2 3 "a" "c" "b")
     print(getAge brent)
-     
+    print(baz brent)
+    print(checkFav brent) 
+    print(checkFav stan) 
+    print(intListProd Empty)
+    print(intListProd (Cons 4 Empty))
 
