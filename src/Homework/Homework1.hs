@@ -28,6 +28,7 @@ validate :: Integer -> Bool
 validate creditCardNumber = sumDigits (doubleEveryOther (toDigitsRev creditCardNumber)) `mod` 10 == 0
 
 -- Tower of Hanoi
+-- The names defined in the let part are accessible tot he expression after the in part 
 type Peg = String
 type Move = (Peg, Peg)
 hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
@@ -38,4 +39,15 @@ hanoi n start end temp =
     in hanoi nMinusOne start temp end ++
        hanoi 1 start end temp ++
        hanoi nMinusOne temp end start
+
+-- Another way to define where nMinusOne using where
+hanoi2 :: Integer -> Peg -> Peg -> Peg -> [Move]
+hanoi2 0 _ _ _ = []
+hanoi2 1 start end _ = [(start, end)]
+hanoi2 n start end temp = hanoi nMinusOne start temp end ++
+                          hanoi 1 start end temp ++
+                          hanoi nMinusOne temp end start
+                          where nMinusOne = subtract 1 n
+
+    
 
