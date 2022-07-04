@@ -18,3 +18,9 @@ main = do
     print(Syntax.factorial 0)
     print(Syntax.factorial 4)
     print(Syntax.addVectors (1, 1) (2, 3))
+    print(Syntax.first (1, 2, 3))
+    print $ Syntax.head' [2,4,6]
+    print $ Syntax.tell [2,3,4,5]
+    print $ Syntax.length' [2,3,4,5]
+    print $ Syntax.sum' [2,3,4,5]
+    print $ Syntax.capital "Dracula"
