@@ -24,3 +24,9 @@ main = do
     print $ Syntax.length' [2,3,4,5]
     print $ Syntax.sum' [2,3,4,5]
     print $ Syntax.capital "Dracula"
+    print $ Syntax.bmiTell 30.0
+    print $ Syntax.max' 4 5
+    print $ Syntax.myCompare 3 5
+    print $ Syntax.bmiTell2 60 170
+    print $ Syntax.initials "Thomas" "Jericho"
+    print $ Syntax.calcBmis [(70, 170), (60, 180), (90, 150)]
