@@ -13,3 +13,7 @@ main :: IO ()
 main = do 
     print $ Syntax.cylinder 4 6
     print $ Syntax.calcBmis2 [ ( 70, 160 ), (80, 150) ]
+    print $ Syntax.head2' [1,3,56,7]
+    print $ Syntax.describeList [1, 2, 4]
+    print $ Syntax.describeList [1]
+    print $ Syntax.describeList []
