@@ -25,4 +25,5 @@ main = do
     print $ Recursion.reverse' [1,2,3,4,5]
     print $ Recursion.zip' [1,2,3] [4,5,6]
     print $ Recursion.elem' "r" ["a", "b", "c"]
+    print $ Recursion.elem' "c" ["a", "b", "c"]
     print $ Recursion.quicksort [5,1,3,8,4,1,45,67,0]
