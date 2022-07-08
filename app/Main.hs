@@ -28,3 +28,25 @@ main = do
     print $ map (+3) [1,2,3]
     print $ filter (>3) [1,2,3,4,5,6]
     print $ Higher.quicksort [1,5,2,3,87,1,7,9]
+    print $ Higher.largestDivisible 
+    print $ sum $ takeWhile (<100) $ filter odd $ map (^2) [1..]
+    print $ Higher.chain 1000
+    print $ Higher.chain2 1000
+    print $ Higher.numLongChains
+    print $ Higher.numLongChains2
+    print $ map (\x -> x + 1) [1..10]
+    print $ Higher.zipWith' (\a b -> a + b) [1,2,3,4] [5,6,7,8]
+    print $ Higher.sum' [1,2,3,4,5,6]
+    print $ Higher.sum2' [1,2,3,4,5,6]
+    print $ Higher.elem' 5 [1,2,3,4,5,6,7]
+    print $ Higher.map' (+3) [1,2,3,4,5]
+    print $ Higher.map' (*2) [1,2,3,4,5]
+    print $ Higher.map2' (*2) [1,2,3,4,5]
+    print $ Higher.maximum' [1,2,3,6,2,1]
+    print $ Higher.reverse' [1,2,3,4]
+    print $ Higher.product' [1,2,3]
+    print $ Higher.filter' (>3) [2,6,2,1,7]
+    print $ Higher.head' [4,1,2,3]
+    print $ Higher.last' [1,2,3,4,5]
+    print $ Higher.sqrtSums 
+    print $ Higher.oddSquareSum
