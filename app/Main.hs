@@ -1,4 +1,7 @@
 module Main where
+
+import Geometry as Geometry
+
 import Lecture.IntroductionToHaskell
 import Lecture.AlgebraicDataTypes
 
@@ -7,21 +10,13 @@ import LearnYouAHaskell.TypesAndTypeclasses as Types
 import LearnYouAHaskell.SyntaxInFunctions as Syntax
 import LearnYouAHaskell.Recursion as Recursion
 import LearnYouAHaskell.HigherOrderFunctions as Higher
+import LearnYouAHaskell.Modules as Modules
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
 
 main :: IO ()
 main = do 
-    print $ Recursion.maximum' [1,2,3,4,7,19,1,2]
-    print $ Recursion.maximum2' [1,2,3,4,7,19,1,2]
-    print $ Recursion.replicate' 3 5
-    print $ Recursion.take' 4 [1,2,3,4,5,6]
-    print $ Recursion.reverse' [1,2,3,4,5]
-    print $ Recursion.zip' [1,2,3] [4,5,6]
-    print $ Recursion.elem' "r" ["a", "b", "c"]
-    print $ Recursion.elem' "c" ["a", "b", "c"]
-    print $ Recursion.quicksort [5,1,3,8,4,1,45,67]
     print $ Higher.applyTwice (+ 4) 20
     print $ Higher.zipWith' (+) [1,2,3] [4,5,6]
     print $ Higher.flip' zip [1,2] [3,4]
@@ -50,3 +45,11 @@ main = do
     print $ Higher.last' [1,2,3,4,5]
     print $ Higher.sqrtSums 
     print $ Higher.oddSquareSum
+    print $ Modules.numUniques [1,2,2,3,1,5]
+    print $ Modules.search "Cat" "Cat in the jungle"
+    print $ Modules.encode 3 "Hello world!"
+    print $ Modules.decode 3 "Khoor#zruog$"
+    print $ Modules.findKey "anne" [("ezzy","1234"),("anne","81824"),("bob", "191234")]
+    print $ Modules.fromList' [(1,2),(3,4)]
+    print $ Modules.phoneBookToMap [("ezzy","1234"),("anne","81824"),("bob", "191234"),("ezzy","1234"),("anne","81824"),("bob", "191234")]
+    print $ Geometry.cubeVolume 5

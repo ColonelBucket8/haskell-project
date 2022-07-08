@@ -25,10 +25,12 @@ source-repository head
 
 library
   exposed-modules:
+      Geometry
       Homework.Homework1
       Homework.Homework2.Log
       Homework.Homework2.LogAnalysis
       LearnYouAHaskell.HigherOrderFunctions
+      LearnYouAHaskell.Modules
       LearnYouAHaskell.Recursion
       LearnYouAHaskell.StartingOut
       LearnYouAHaskell.SyntaxInFunctions
@@ -42,6 +44,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable haskell-project-exe
