@@ -17,6 +17,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeParameters as TypePa
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances as Derived
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeSynonyms as TypeSynonyms
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures as Recursive
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Typeclasses102 as Typeclasses
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -54,4 +55,5 @@ main = do
     print $ TypeSynonyms.lockerLookup 120 TypeSynonyms.lockers 
     let nums = [1,2,3,4,5,6,2,1,3,4]
     print $ foldr treeInsert EmptyTree nums
+    
     
