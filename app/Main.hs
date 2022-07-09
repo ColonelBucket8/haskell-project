@@ -19,6 +19,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeSynonyms as TypeSyno
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures as Recursive
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Typeclasses102 as Typeclasses
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass as AYesNo
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TheFunctorTypeclass as TheFunctor
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -60,5 +61,6 @@ main = do
     print $ AYesNo.yesno $ Green 
     print $ AYesNo.yesno $ Red 
     print $ AYesNo.yesnoIf [] "YEAH!" "NO"
+    print $ fmap (*2) [1,2,3]
     
     

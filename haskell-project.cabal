@@ -35,6 +35,7 @@ library
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape
+      LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TheFunctorTypeclass
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Typeclasses102
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeParameters
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeSynonyms
