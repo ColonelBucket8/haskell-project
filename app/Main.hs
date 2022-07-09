@@ -11,6 +11,8 @@ import LearnYouAHaskell.SyntaxInFunctions as Syntax
 import LearnYouAHaskell.Recursion as Recursion
 import LearnYouAHaskell.HigherOrderFunctions as Higher
 import LearnYouAHaskell.Modules as Modules
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape as Shape
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax as Record
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -53,3 +55,12 @@ main = do
     print $ Modules.fromList' [(1,2),(3,4)]
     print $ Modules.phoneBookToMap [("ezzy","1234"),("anne","81824"),("bob", "191234"),("ezzy","1234"),("anne","81824"),("bob", "191234")]
     print $ Geometry.cubeVolume 5
+    print $ Shape.surface (Circle  ( Point  4.0 3.0 )  5.0)
+    print $ Shape.surface (Rectangle ( Point 2.0 3.0 )  ( Point 4.0 2.0 ))
+    print $ Shape.nudge (Circle (Point 4.0 3.0) 5.0) 2.0 2.0
+    print $ Shape.nudge (Rectangle (Point 2.0 3.0) (Point 4.0 2.0)) 2.0 2.0
+    print $ Shape.nudge (Shape.baseCircle 5.0) 60 23
+    print $ Shape.baseRect 2.0 3.0
+    let guy = Record.Person "guy" "buddy" 12 160.5 "12356" "vanilla"
+    print $ Record.firstName guy
+    
