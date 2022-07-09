@@ -18,6 +18,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances as Deri
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeSynonyms as TypeSynonyms
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures as Recursive
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Typeclasses102 as Typeclasses
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass as AYesNo
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -55,5 +56,9 @@ main = do
     print $ TypeSynonyms.lockerLookup 120 TypeSynonyms.lockers 
     let nums = [1,2,3,4,5,6,2,1,3,4]
     print $ foldr treeInsert EmptyTree nums
+    print $ AYesNo.yesno $ length []
+    print $ AYesNo.yesno $ Green 
+    print $ AYesNo.yesno $ Red 
+    print $ AYesNo.yesnoIf [] "YEAH!" "NO"
     
     

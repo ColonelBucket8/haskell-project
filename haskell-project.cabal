@@ -30,6 +30,7 @@ library
       Homework.Homework2.Log
       Homework.Homework2.LogAnalysis
       LearnYouAHaskell.HigherOrderFunctions
+      LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures
