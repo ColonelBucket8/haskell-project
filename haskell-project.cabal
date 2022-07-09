@@ -32,6 +32,7 @@ library
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax
+      LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeParameters
       LearnYouAHaskell.Modules
       LearnYouAHaskell.Recursion
       LearnYouAHaskell.StartingOut

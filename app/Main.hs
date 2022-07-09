@@ -13,6 +13,7 @@ import LearnYouAHaskell.HigherOrderFunctions as Higher
 import LearnYouAHaskell.Modules as Modules
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape as Shape
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax as Record
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeParameters as TypeParam
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -63,4 +64,9 @@ main = do
     print $ Shape.baseRect 2.0 3.0
     let guy = Record.Person "guy" "buddy" 12 160.5 "12356" "vanilla"
     print $ Record.firstName guy
+    let vectorA = Vector 1 2 3
+    let vectorB = Vector 4 5 6
+    print $ TypeParam.addVector vectorA vectorB
+    print $ TypeParam.multiplyVector vectorA 2
+    print $ TypeParam.scalarMult vectorA vectorB
     
