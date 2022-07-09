@@ -14,6 +14,7 @@ import LearnYouAHaskell.Modules as Modules
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape as Shape
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax as Record
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TypeParameters as TypeParam
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances as Derived
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -69,4 +70,5 @@ main = do
     print $ TypeParam.addVector vectorA vectorB
     print $ TypeParam.multiplyVector vectorA 2
     print $ TypeParam.scalarMult vectorA vectorB
+    print $ Wednesday
     
