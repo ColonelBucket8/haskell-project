@@ -20,6 +20,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures 
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Typeclasses102 as Typeclasses
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass as AYesNo
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TheFunctorTypeclass as TheFunctor
+import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo as Kinds
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis

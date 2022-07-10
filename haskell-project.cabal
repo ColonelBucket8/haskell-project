@@ -32,6 +32,7 @@ library
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances
+      LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecordSyntax
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.RecursiveDataStructures
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.Shape
