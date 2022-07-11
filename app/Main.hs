@@ -24,11 +24,14 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass as AYesN
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TheFunctorTypeclass as TheFunctor
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo as Kinds
 import LearnYouAHaskell.InputAndOutput.HelloWorld as Hello
+import LearnYouAHaskell.InputAndOutput.FilesAndStreams as Files
+
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
 
 main :: IO ()
+-- main = forever $ do 
 main = do 
     -- print $ Modules.numUniques [1,2,2,3,1,5]
     -- print $ Modules.search "Cat" "Cat in the jungle"
@@ -67,7 +70,12 @@ main = do
     -- print $ AYesNo.yesnoIf [] "YEAH!" "NO"
     -- print $ fmap (*2) [1,2,3]
     -- Basic getLine
-    putStrLn "Hello, what's your name"
-    name <- getLine
-    let uppercaseName = map toUpper name
-    putStrLn ("Hey " ++ uppercaseName ++ ", you suck!") 
+    -- putStrLn "Hello, what's your name"
+    -- name <- getLine
+    -- let uppercaseName = map toUpper name
+    -- putStrLn ("Hey " ++ uppercaseName ++ ", you suck!") 
+    -- putStr "Give me some input: "
+    -- input <- getLine
+    -- putStrLn $ map toUpper input
+    contents <- getContents
+    putStr $ Files.shortLinesOnly contents
