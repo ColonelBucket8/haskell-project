@@ -25,6 +25,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.TheFunctorTypeclass as T
 import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo as Kinds
 import LearnYouAHaskell.InputAndOutput.HelloWorld as Hello
 import LearnYouAHaskell.InputAndOutput.FilesAndStreams as Files
+import LearnYouAHaskell.InputAndOutput.CommandLineArguments as Command
 
 
 import Homework.Homework1
