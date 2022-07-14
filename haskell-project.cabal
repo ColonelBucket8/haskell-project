@@ -33,6 +33,7 @@ library
       LearnYouAHaskell.InputAndOutput.CommandLineArguments
       LearnYouAHaskell.InputAndOutput.FilesAndStreams
       LearnYouAHaskell.InputAndOutput.HelloWorld
+      LearnYouAHaskell.InputAndOutput.Randomness
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.AYesNoTypeclass
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.DerivedInstances
       LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo
@@ -59,6 +60,7 @@ library
       base >=4.7 && <5
     , containers
     , directory
+    , random
   default-language: Haskell2010
 
 executable haskell-project-exe
@@ -73,6 +75,7 @@ executable haskell-project-exe
     , containers
     , directory
     , haskell-project
+    , random
   default-language: Haskell2010
 
 test-suite haskell-project-test
@@ -88,4 +91,5 @@ test-suite haskell-project-test
     , containers
     , directory
     , haskell-project
+    , random
   default-language: Haskell2010

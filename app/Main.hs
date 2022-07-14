@@ -3,6 +3,7 @@ module Main where
 import Data.Char
 import Control.Monad
 import Geometry as Geometry
+import System.Random
 
 import Lecture.IntroductionToHaskell
 import Lecture.AlgebraicDataTypes
@@ -26,7 +27,7 @@ import LearnYouAHaskell.MakingOurOwnTypesAndTypeclasses.KindsAndSomeTypeFoo as K
 import LearnYouAHaskell.InputAndOutput.HelloWorld as Hello
 import LearnYouAHaskell.InputAndOutput.FilesAndStreams as Files
 import LearnYouAHaskell.InputAndOutput.CommandLineArguments as Command
-
+import LearnYouAHaskell.InputAndOutput.Randomness as Randomness
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -78,5 +79,7 @@ main = do
     -- putStr "Give me some input: "
     -- input <- getLine
     -- putStrLn $ map toUpper input
-    contents <- getContents
-    putStr $ Files.shortLinesOnly contents
+    -- contents <- getContents
+    -- putStr $ Files.shortLinesOnly contents
+    print $ Randomness.threeCoins (mkStdGen 21)
+    
