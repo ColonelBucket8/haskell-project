@@ -14,6 +14,15 @@ import Data.List
 --     putStrLn "The program name is:"
 --     putStrLn programName
 
+-- returns new array without indexed element
+deleteAt :: Int -> [x] -> [x]
+deleteAt index xs = leftArray ++ rightArray 
+    where (leftArray, (_:rightArray)) = splitAt index xs
+
+bumpToTop :: Int -> [x] -> [x]
+bumpToTop index xs = elementToBump : leftArray ++ rightArray
+    where (leftArray, (elementToBump:rightArray)) = splitAt index xs
+
 -- >>> lookup 2 []
 -- Nothing
 -- >>> lookup 2 [(1, "first")]
@@ -25,7 +34,7 @@ main = do
     let (Just action) = lookup command dispatch
     action args
 
-dispatch :: [(String, [String] -> IO ())]
+dispatch :: [(String, [String] -> IO ())] 
 dispatch = [ ("add", add)
            , ("view", view)
            , ("remove", remove)
@@ -48,14 +57,24 @@ remove [fileName, numberString] = do
     contents <- hGetContents handle
     let number = read numberString
         todoTasks = lines contents
-        newTodoItems = delete (todoTasks !! number) todoTasks
-    hPutStr tempHandle $ unlines newTodoItems
+        -- newTodoItems = delete (todoTasks !! number) todoTasks
+        newTodoItems = deleteAt number todoTasks
+    hPutStr tempHandle $ unlines $ deleteAt number todoTasks
     hClose handle
     hClose tempHandle
     removeFile fileName
     renameFile tempName fileName
 
--- returns new array without indexed element
-deleteAt :: (Num a) => a -> [x] -> [x]
-deleteAt index xs = leftArray ++ rightArray 
-    where (leftArray, (_:rightArray)) = splitAt index xs
+bump :: [String] -> IO ()
+bump [fileName, numberString] = do
+    handle <- openFile fileName ReadMode
+    (tempName, tempHandle) <- openTempFile "." "temp"
+    contents <- hGetContents handle
+    let number = read numberString
+        todoTasks = lines contents
+        newTodoItems = bumpToTop number todoTasks
+    hPutStr tempHandle $ unlines newTodoItems
+    hClose handle
+    hClose tempHandle
+    removeFile fileName
+    renameFile tempName fileName
