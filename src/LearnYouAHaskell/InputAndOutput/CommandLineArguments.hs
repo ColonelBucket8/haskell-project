@@ -54,3 +54,8 @@ remove [fileName, numberString] = do
     hClose tempHandle
     removeFile fileName
     renameFile tempName fileName
+
+-- returns new array without indexed element
+deleteAt :: (Num a) => a -> [x] -> [x]
+deleteAt index xs = leftArray ++ rightArray 
+    where (leftArray, (_:rightArray)) = splitAt index xs
