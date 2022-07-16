@@ -28,6 +28,7 @@ import LearnYouAHaskell.InputAndOutput.HelloWorld as Hello
 import LearnYouAHaskell.InputAndOutput.FilesAndStreams as Files
 import LearnYouAHaskell.InputAndOutput.CommandLineArguments as Command
 import LearnYouAHaskell.InputAndOutput.Randomness as Randomness
+import LearnYouAHaskell.InputAndOutput.Bytestrings as Bytestrings
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis

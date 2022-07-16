@@ -30,6 +30,7 @@ library
       Homework.Homework2.Log
       Homework.Homework2.LogAnalysis
       LearnYouAHaskell.HigherOrderFunctions
+      LearnYouAHaskell.InputAndOutput.Bytestrings
       LearnYouAHaskell.InputAndOutput.CommandLineArguments
       LearnYouAHaskell.InputAndOutput.FilesAndStreams
       LearnYouAHaskell.InputAndOutput.HelloWorld
@@ -58,6 +59,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , directory
     , random
@@ -72,6 +74,7 @@ executable haskell-project-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , directory
     , haskell-project
@@ -88,6 +91,7 @@ test-suite haskell-project-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , directory
     , haskell-project
