@@ -32,6 +32,7 @@ library
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.InputAndOutput.Bytestrings
       LearnYouAHaskell.InputAndOutput.CommandLineArguments
+      LearnYouAHaskell.InputAndOutput.Exceptions
       LearnYouAHaskell.InputAndOutput.FilesAndStreams
       LearnYouAHaskell.InputAndOutput.HelloWorld
       LearnYouAHaskell.InputAndOutput.Randomness
