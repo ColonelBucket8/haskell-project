@@ -82,4 +82,8 @@ main = do
     -- contents <- getContents
     -- putStr $ Files.shortLinesOnly contents
     print $ Randomness.threeCoins (mkStdGen 21)
+    -- gen <- getStdGen
+    -- putStr $ take 20 $ randomRs ('a', 'z') gen
+    gen <- getStdGen
+    Randomness.askForNumber gen
     
