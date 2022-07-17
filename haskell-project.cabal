@@ -29,6 +29,7 @@ library
       Homework.Homework1
       Homework.Homework2.Log
       Homework.Homework2.LogAnalysis
+      LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.InputAndOutput.Bytestrings
       LearnYouAHaskell.InputAndOutput.CommandLineArguments

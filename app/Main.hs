@@ -30,6 +30,7 @@ import LearnYouAHaskell.InputAndOutput.CommandLineArguments as Command
 import LearnYouAHaskell.InputAndOutput.Randomness as Randomness
 import LearnYouAHaskell.InputAndOutput.Bytestrings as Bytestrings
 import LearnYouAHaskell.InputAndOutput.Exceptions as Exceptions
+import LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator as ReversePolish
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -83,9 +84,9 @@ main = do
     -- putStrLn $ map toUpper input
     -- contents <- getContents
     -- putStr $ Files.shortLinesOnly contents
-    print $ Randomness.threeCoins (mkStdGen 21)
+    -- print $ Randomness.threeCoins (mkStdGen 21)
     -- gen <- getStdGen
     -- putStr $ take 20 $ randomRs ('a', 'z') gen
-    gen <- getStdGen
-    Randomness.askForNumber gen
-    
+    -- gen <- getStdGen
+    -- Randomness.askForNumber gen
+    print $ ReversePolish.solveRPN "10 3 4 + 2 * -"
