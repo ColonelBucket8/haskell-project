@@ -31,6 +31,7 @@ import LearnYouAHaskell.InputAndOutput.Randomness as Randomness
 import LearnYouAHaskell.InputAndOutput.Bytestrings as Bytestrings
 import LearnYouAHaskell.InputAndOutput.Exceptions as Exceptions
 import LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator as ReversePolish
+import LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon as Heathrow
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -90,3 +91,4 @@ main = do
     -- gen <- getStdGen
     -- Randomness.askForNumber gen
     print $ ReversePolish.solveRPN "10 3 4 + 2 * -"
+    print $ Heathrow.optimalPath Heathrow.heathrowToLondon
