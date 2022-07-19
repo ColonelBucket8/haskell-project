@@ -32,6 +32,7 @@ import LearnYouAHaskell.InputAndOutput.Bytestrings as Bytestrings
 import LearnYouAHaskell.InputAndOutput.Exceptions as Exceptions
 import LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator as ReversePolish
 import LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon as Heathrow
+import LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux as Functors
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
