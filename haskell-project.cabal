@@ -31,6 +31,7 @@ library
       Homework.Homework2.LogAnalysis
       LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon
       LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator
+      LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors
       LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.InputAndOutput.Bytestrings

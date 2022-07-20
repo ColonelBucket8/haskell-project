@@ -33,6 +33,7 @@ import LearnYouAHaskell.InputAndOutput.Exceptions as Exceptions
 import LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator as ReversePolish
 import LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon as Heathrow
 import LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux as Functors
+import LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors as ApplicativeFunctors
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -91,5 +92,6 @@ main = do
     -- putStr $ take 20 $ randomRs ('a', 'z') gen
     -- gen <- getStdGen
     -- Randomness.askForNumber gen
-    print $ ReversePolish.solveRPN "10 3 4 + 2 * -"
-    print $ Heathrow.optimalPath Heathrow.heathrowToLondon
+    -- print $ ReversePolish.solveRPN "10 3 4 + 2 * -"
+    -- print $ Heathrow.optimalPath Heathrow.heathrowToLondon
+    print $ ApplicativeFunctors.sequenceB [(>4), (<10), even] 7
