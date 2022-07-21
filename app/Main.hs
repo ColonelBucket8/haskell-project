@@ -34,6 +34,7 @@ import LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalcula
 import LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon as Heathrow
 import LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux as Functors
 import LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors as ApplicativeFunctors
+import LearnYouAHaskell.FunctorsApplicativeMonoids.NewtypeKeyword as Newtype
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -95,3 +96,6 @@ main = do
     -- print $ ReversePolish.solveRPN "10 3 4 + 2 * -"
     -- print $ Heathrow.optimalPath Heathrow.heathrowToLondon
     print $ ApplicativeFunctors.sequenceB [(>4), (<10), even] 7
+    print $ Newtype.CharList "This will be shown!"
+    print $ getPair $ fmap (*100) ( Pair (2,3) )
+    print $ Newtype.helloMe ( CoolBool True ) 
