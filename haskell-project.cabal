@@ -33,6 +33,7 @@ library
       LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator
       LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors
       LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux
+      LearnYouAHaskell.FunctorsApplicativeMonoids.Monoids
       LearnYouAHaskell.FunctorsApplicativeMonoids.NewtypeKeyword
       LearnYouAHaskell.HigherOrderFunctions
       LearnYouAHaskell.InputAndOutput.Bytestrings

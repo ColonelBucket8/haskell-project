@@ -35,6 +35,7 @@ import LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon as Heathrow
 import LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux as Functors
 import LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors as ApplicativeFunctors
 import LearnYouAHaskell.FunctorsApplicativeMonoids.NewtypeKeyword as Newtype
+import LearnYouAHaskell.FunctorsApplicativeMonoids.Monoids as Monoids
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -99,3 +100,6 @@ main = do
     print $ Newtype.CharList "This will be shown!"
     print $ getPair $ fmap (*100) ( Pair (2,3) )
     print $ Newtype.helloMe ( CoolBool True ) 
+    print $ [1,2,3] `mappend` [4,5,6]
+    print $ Monoids.lengthCompare2 "abuasdf" "ubaa"
+    print $ Monoids.lengthCompare3 "zen" "ann"
