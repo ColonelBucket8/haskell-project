@@ -39,6 +39,7 @@ import LearnYouAHaskell.FunctorsApplicativeMonoids.Monoids as Monoids
 import LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe as Getting
 import LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass as TheMonad
 import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
+import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -113,3 +114,7 @@ main = do
     print $ WalkTheLine.landLeft2 1 (0,0) >>= WalkTheLine.landLeft2 3
     print $ WalkTheLine.landRight2 3 (0,0) >>= WalkTheLine.landLeft2 2
     print $ return (0,0) >>= WalkTheLine.landRight2 2 >>= WalkTheLine.landLeft2 2 >>= WalkTheLine.landRight2 2
+    print $ Just 3 >>= (\x -> Just "!" >>= (\y -> Just ( show x ++ y)))
+    print $ DoNotation.routine
+    print $ DoNotation.justH
+    print $ DoNotation.wopwop
