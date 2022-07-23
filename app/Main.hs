@@ -36,6 +36,9 @@ import LearnYouAHaskell.FunctorsApplicativeMonoids.FunctorsRedux as Functors
 import LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors as ApplicativeFunctors
 import LearnYouAHaskell.FunctorsApplicativeMonoids.NewtypeKeyword as Newtype
 import LearnYouAHaskell.FunctorsApplicativeMonoids.Monoids as Monoids
+import LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe as Getting
+import LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass as TheMonad
+import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -103,3 +106,10 @@ main = do
     print $ [1,2,3] `mappend` [4,5,6]
     print $ Monoids.lengthCompare2 "abuasdf" "ubaa"
     print $ Monoids.lengthCompare3 "zen" "ann"
+    print $ Getting.applyMaybe ( Just 3 ) (\x -> Just (x + 3))
+    print $ Just 9 >>= \x -> return (x * 3)
+    print $ WalkTheLine.landLeft 3 (1,0)
+    print $ WalkTheLine.landLeft2 4 (3,0)
+    print $ WalkTheLine.landLeft2 1 (0,0) >>= WalkTheLine.landLeft2 3
+    print $ WalkTheLine.landRight2 3 (0,0) >>= WalkTheLine.landLeft2 2
+    print $ return (0,0) >>= WalkTheLine.landRight2 2 >>= WalkTheLine.landLeft2 2 >>= WalkTheLine.landRight2 2
