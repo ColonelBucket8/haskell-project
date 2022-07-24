@@ -41,6 +41,7 @@ import LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass as TheMonad
 import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
 import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
 import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
+import LearnYouAHaskell.AFistfulOfMonads.MonadLaws as MonadLaws
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
