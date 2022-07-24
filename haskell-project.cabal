@@ -35,6 +35,7 @@ library
       LearnYouAHaskell.AFistfulOfMonads.TheListMonad
       LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass
       LearnYouAHaskell.AFistfulOfMonads.WalkTheLine
+      LearnYouAHaskell.ForAFewMonadsMore.Writer
       LearnYouAHaskell.FunctionallySolvingProblems.HeathrowToLondon
       LearnYouAHaskell.FunctionallySolvingProblems.ReversePolishNotationCalculator
       LearnYouAHaskell.FunctorsApplicativeMonoids.ApplicativeFunctors

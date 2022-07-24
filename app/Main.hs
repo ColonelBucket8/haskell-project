@@ -1,6 +1,7 @@
 module Main where
 
 import Data.Char
+import Data.Monoid
 import Control.Monad
 import Geometry as Geometry
 import System.Random
@@ -42,6 +43,7 @@ import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
 import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
 import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
 import LearnYouAHaskell.AFistfulOfMonads.MonadLaws as MonadLaws
+import LearnYouAHaskell.ForAFewMonadsMore.Writer as Writer
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -129,3 +131,8 @@ main = do
     print $ TheList.in3 (6,2)
     print $ TheList.canReachIn3 (6,2) (6,1)
     print $ TheList.canReachIn3 (6,2) (7,3)
+    print $ Writer.isBigGang2 5
+    print $ Writer.applyLog (6, "Small gang.") isBigGang2
+    print $ ("Tobin", "Got outlaw name") `Writer.applyLog` (\x -> (length x, "Applied length."))
+    print $ Writer.applyLog' ("beans", Sum 10) addDrink 
+    print $ ("beans", Sum 10) `Writer.applyLog'` addDrink  `Writer.applyLog'` addDrink
