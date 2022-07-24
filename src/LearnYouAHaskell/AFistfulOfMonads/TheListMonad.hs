@@ -37,3 +37,34 @@ main = do
     print $ [1..50] >>= (\x -> guard ('7' `elem` show x) >> return x)
     -- List comprehension
     print $ [x | x <- [1..50], '7' `elem` show x]
+
+-- A Knight's Quest
+type KnightPos = (Int,Int)
+
+moveKnight :: KnightPos -> [KnightPos]
+moveKnight (c,r) = do
+    (c',r') <- [(c+2,r-1),(c+2,r+1),(c-2,r-1),(c-2,r+1)
+               ,(c+1,r-2),(c+1,r+2),(c-1,r-2),(c-1,r+2)
+               ]
+    guard (c' `elem` [1..8] && r' `elem` [1..8])
+    return (c',r')
+
+-- Without monad
+moveKnight2 :: KnightPos -> [KnightPos]
+moveKnight2 (c,r) = filter onBoard
+    [(c+2,r-1),(c+2,r+1),(c-2,r-1),(c-2,r+1)
+    ,(c+1,r-2),(c+1,r+2),(c-1,r-2),(c-1,r+2)
+    ]
+    where onBoard (c,r) = c `elem` [1..8] && r `elem` [1..8]
+
+in3 :: KnightPos -> [KnightPos]
+in3 start = do
+    first <- moveKnight start 
+    second <- moveKnight first
+    moveKnight second
+
+in3' :: KnightPos -> [KnightPos]
+in3' start = return start >>= moveKnight >>= moveKnight >>= moveKnight
+
+canReachIn3 :: KnightPos -> KnightPos -> Bool
+canReachIn3 start end = end `elem` in3 start

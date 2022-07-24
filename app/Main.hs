@@ -123,3 +123,8 @@ main = do
     print $ [3,4,5] >>= \x -> [x,-x]
     print $ [1,2] >>= \x -> ['a', 'b'] >>= \char -> return ( x,char )
     print $ TheList.sevensOnly 
+    print $ TheList.moveKnight (6,2)
+    print $ TheList.moveKnight (11,22)
+    print $ TheList.in3 (6,2)
+    print $ TheList.canReachIn3 (6,2) (6,1)
+    print $ TheList.canReachIn3 (6,2) (7,3)
