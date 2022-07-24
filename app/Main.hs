@@ -40,6 +40,7 @@ import LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe as Getting
 import LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass as TheMonad
 import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
 import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
+import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -118,3 +119,7 @@ main = do
     print $ DoNotation.routine
     print $ DoNotation.justH
     print $ DoNotation.wopwop
+    print $ (*) <$> [1,2,3] <*> [10,100,1000]
+    print $ [3,4,5] >>= \x -> [x,-x]
+    print $ [1,2] >>= \x -> ['a', 'b'] >>= \char -> return ( x,char )
+    print $ TheList.sevensOnly 
