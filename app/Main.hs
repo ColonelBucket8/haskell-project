@@ -3,6 +3,7 @@ module Main where
 import Data.Char
 import Data.Monoid
 import Control.Monad
+import Control.Monad.Writer
 import Geometry as Geometry
 import System.Random
 
@@ -136,3 +137,6 @@ main = do
     print $ ("Tobin", "Got outlaw name") `Writer.applyLog` (\x -> (length x, "Applied length."))
     print $ Writer.applyLog' ("beans", Sum 10) addDrink 
     print $ ("beans", Sum 10) `Writer.applyLog'` addDrink  `Writer.applyLog'` addDrink
+    print $ Writer.gcd' 8 4
+    print $ fst $ runWriter $ Writer.gcd2' 8 4
+    mapM_ putStrLn $ snd $ runWriter $ Writer.gcd2' 8 3
