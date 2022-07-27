@@ -43,7 +43,7 @@ import LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass as TheMonad
 import LearnYouAHaskell.AFistfulOfMonads.WalkTheLine as WalkTheLine
 import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
 import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
-import LearnYouAHaskell.AFistfulOfMonads.MonadLaws as MonadLaws
+-- import LearnYouAHaskell.AFistfulOfMonads.MonadLaws as MonadLaws
 import LearnYouAHaskell.ForAFewMonadsMore.Writer as Writer
 
 import Homework.Homework1
@@ -140,3 +140,7 @@ main = do
     print $ Writer.gcd' 8 4
     print $ fst $ runWriter $ Writer.gcd2' 8 4
     mapM_ putStrLn $ snd $ runWriter $ Writer.gcd2' 8 3
+    print $ Writer.fromDiffList (Writer.toDiffList [1,2,3,4] `mappend` Writer.toDiffList [1,2,3])
+    -- mapM_ putStrLn . fromDiffList . snd . runWriter $ Writer.finalCountDown 100000
+    mapM_ putStrLn . snd . runWriter $ Writer.normalFinalCountDown 100000
+
