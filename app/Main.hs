@@ -45,6 +45,8 @@ import LearnYouAHaskell.AFistfulOfMonads.DoNotation as DoNotation
 import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
 -- import LearnYouAHaskell.AFistfulOfMonads.MonadLaws as MonadLaws
 import LearnYouAHaskell.ForAFewMonadsMore.Writer as Writer
+import LearnYouAHaskell.ForAFewMonadsMore.Reader as Reader
+import LearnYouAHaskell.ForAFewMonadsMore.TastefulStateful as TastefulStateful
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
@@ -142,5 +144,6 @@ main = do
     mapM_ putStrLn $ snd $ runWriter $ Writer.gcd2' 8 3
     print $ Writer.fromDiffList (Writer.toDiffList [1,2,3,4] `mappend` Writer.toDiffList [1,2,3])
     -- mapM_ putStrLn . fromDiffList . snd . runWriter $ Writer.finalCountDown 100000
-    mapM_ putStrLn . snd . runWriter $ Writer.normalFinalCountDown 100000
-
+    -- mapM_ putStrLn . snd . runWriter $ Writer.normalFinalCountDown 100000
+    print $ Reader.addStuff 5
+    print $ TastefulStateful.stackManip [1,2,3]
