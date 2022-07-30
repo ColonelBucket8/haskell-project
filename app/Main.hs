@@ -11,6 +11,7 @@ import System.Random
 import Lecture.IntroductionToHaskell
 import Lecture.Lecture2.AlgebraicDataTypes
 import Lecture.Lecture2.TypesAndFunctions as TypesAndFunctions
+import Lecture.Lecture2.DefiningTypes as DefiningTypes 
 
 import LearnYouAHaskell.StartingOut as Starting
 import LearnYouAHaskell.TypesAndTypeclasses as Types
@@ -151,3 +152,4 @@ main = do
     print $ Reader.addStuff 5
     print $ TastefulStateful.stackManip [1,2,3]
     -- runState TastefulStateful.stackManip'' [5,6,1,2]
+    print $ DefiningTypes.myInfo

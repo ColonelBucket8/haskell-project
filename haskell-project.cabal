@@ -69,6 +69,7 @@ library
       LearnYouAHaskell.TypesAndTypeclasses
       Lecture.IntroductionToHaskell
       Lecture.Lecture2.AlgebraicDataTypes
+      Lecture.Lecture2.DefiningTypes
       Lecture.Lecture2.TypesAndFunctions
       Lib
   other-modules:
