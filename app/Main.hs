@@ -4,6 +4,7 @@ import Data.Char
 import Data.Monoid
 import Control.Monad
 import Control.Monad.Writer
+import Control.Monad.State
 import Geometry as Geometry
 import System.Random
 
@@ -147,3 +148,4 @@ main = do
     -- mapM_ putStrLn . snd . runWriter $ Writer.normalFinalCountDown 100000
     print $ Reader.addStuff 5
     print $ TastefulStateful.stackManip [1,2,3]
+    -- runState TastefulStateful.stackManip'' [5,6,1,2]
