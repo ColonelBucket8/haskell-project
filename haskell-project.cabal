@@ -35,6 +35,7 @@ library
       LearnYouAHaskell.AFistfulOfMonads.TheListMonad
       LearnYouAHaskell.AFistfulOfMonads.TheMonadTypeClass
       LearnYouAHaskell.AFistfulOfMonads.WalkTheLine
+      LearnYouAHaskell.ForAFewMonadsMore.ErrorOnTheWall
       LearnYouAHaskell.ForAFewMonadsMore.Reader
       LearnYouAHaskell.ForAFewMonadsMore.TastefulStateful
       LearnYouAHaskell.ForAFewMonadsMore.Writer
@@ -66,8 +67,9 @@ library
       LearnYouAHaskell.StartingOut
       LearnYouAHaskell.SyntaxInFunctions
       LearnYouAHaskell.TypesAndTypeclasses
-      Lecture.AlgebraicDataTypes
       Lecture.IntroductionToHaskell
+      Lecture.Lecture2.AlgebraicDataTypes
+      Lecture.Lecture2.TypesAndFunctions
       Lib
   other-modules:
       Paths_haskell_project

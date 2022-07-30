@@ -1,4 +1,4 @@
-module Lecture.AlgebraicDataTypes where
+module Lecture.Lecture2.AlgebraicDataTypes where
 
 -- Enumeration Types
 -- The deriving Show is a magical incantation which tells GHC to automatically 

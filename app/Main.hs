@@ -9,7 +9,8 @@ import Geometry as Geometry
 import System.Random
 
 import Lecture.IntroductionToHaskell
-import Lecture.AlgebraicDataTypes
+import Lecture.Lecture2.AlgebraicDataTypes
+import Lecture.Lecture2.TypesAndFunctions as TypesAndFunctions
 
 import LearnYouAHaskell.StartingOut as Starting
 import LearnYouAHaskell.TypesAndTypeclasses as Types
@@ -48,6 +49,7 @@ import LearnYouAHaskell.AFistfulOfMonads.TheListMonad as TheList
 import LearnYouAHaskell.ForAFewMonadsMore.Writer as Writer
 import LearnYouAHaskell.ForAFewMonadsMore.Reader as Reader
 import LearnYouAHaskell.ForAFewMonadsMore.TastefulStateful as TastefulStateful
+import LearnYouAHaskell.ForAFewMonadsMore.ErrorOnTheWall as ErrorOnTheWall
 
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis
