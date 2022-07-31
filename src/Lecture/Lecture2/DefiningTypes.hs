@@ -150,3 +150,87 @@ safeSecond (x:xs) = if null (tail xs)
 tidySecond :: [a] -> Maybe a
 tidySecond [] = Nothing
 tidySecond (_:x:_) = Just x
+
+-- Introducing local variables
+lend :: (Num a, Ord a) => a -> a -> Maybe a
+lend amount balance = let reserve    = 100
+                          newBalance = balance - amount
+                      in if balance < reserve
+                         then Nothing
+                         else Just newBalance
+
+-- The where clause                  
+lend2 amount balance = if balance < reserve
+                       then Nothing
+                       else Just newBalance
+  where reserve      = 100
+        newBalance   = balance - amount
+
+-- Local functions, global variables
+pluralise :: String -> [Int] -> [String]
+pluralise word counts = map plural counts
+  where plural 0 = "no " ++ word ++ "s"
+        plural 1 = "one " ++ word
+        plural n = show n ++ " " ++ word ++ "s"
+
+-- can also define variables, as well as functions, at the top of a source file
+itemName :: String
+itemName = "Weighted Companian Cube"
+
+-- The case expression
+fromMaybe :: a -> Maybe a -> a
+fromMaybe defVal wrapped = 
+  case wrapped of
+    Nothing     -> defVal
+    Just value  -> value
+
+data Fruit = Apple | Lemon
+
+betterFruit :: String -> Fruit
+betterFruit fruit = case fruit of
+                      "apple"   -> Apple
+                      "lemon"  -> Lemon
+
+-- Conditional evaluation with guards
+nodesAreSame :: (Eq a) => Tree a -> Tree a -> Maybe a
+nodesAreSame (Node a _ _) (Node b _ _)
+  | a == b       = Just a
+nodesAreSame _ _ = Nothing
+
+lend3 :: (Num a, Ord a, Fractional a) => a -> a -> Maybe a
+lend3 amount balance
+  | amount <= 0             = Nothing
+  | amount > reserve * 0.5  = Nothing
+  | otherwise               = Just newBalance
+  where reserve     = 100
+        newBalance  = balance - amount
+
+niceDrop :: Int -> [a] -> [a]
+niceDrop _ [] = []
+niceDrop n xs | n <= 0 = xs
+niceDrop n (_:xs) = niceDrop (n - 1) xs
+   
+-- Exercises
+length' :: [a] -> Int
+length' [] = 0
+length' (_:xs) = 1 + length' xs
+
+sum' :: [Double] -> Double
+sum' [] = 0
+sum' (x:xs) = x + sum xs
+
+mean :: [Double] -> Double
+mean [] = 0
+mean xs = sum' xs / fromIntegral (length' xs)
+
+splitHalf :: [a] -> ([a], [a])
+splitHalf xs 
+  | odd (length xs) = ([], xs)
+  | otherwise       = splitAt ((length xs + 1) `div` 2) xs
+
+toPalindrome :: [a] -> [a]
+toPalindrome [] = []
+toPalindrome xs = xs ++ reverse xs
+
+isPalindrome :: String -> Bool
+isPalindrome word = word == reverse word 

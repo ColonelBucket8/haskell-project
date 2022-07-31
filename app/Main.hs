@@ -160,4 +160,14 @@ main = do
     -- print $ DefiningTypes.safeSecond []
     print $ DefiningTypes.safeSecond [1,2,3,4,5]
     print $ DefiningTypes.tidySecond [1,2,3,4,5]
-
+    print $ DefiningTypes.lend 200 150
+    print $ DefiningTypes.fromMaybe 0 (Just 4)
+    print $ DefiningTypes.fromMaybe 0 Nothing
+    print $ DefiningTypes.nodesAreSame treeEx (DefiningTypes.Node "lul" DefiningTypes.Empty DefiningTypes.Empty) 
+    print $ DefiningTypes.nodesAreSame treeEx treeEx
+    print $ DefiningTypes.niceDrop 3 [1,2,3,4,5,6]
+    print $ DefiningTypes.length' [1,2,3,4]
+    print $ DefiningTypes.mean [1,2,3,4,5]
+    print $ DefiningTypes.toPalindrome [1,2,3,4,5]
+    print $ DefiningTypes.splitHalf [1,2,3,4,5]
+    print $ DefiningTypes.isPalindrome "liil" 
