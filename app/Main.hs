@@ -155,4 +155,9 @@ main = do
     print $ DefiningTypes.myInfo
     print $ DefiningTypes.fromList "durian"
     print $ DefiningTypes.treeEx
+    print $ DefiningTypes.treeExM
+    -- print $ DefiningTypes.mySecond [1]
+    -- print $ DefiningTypes.safeSecond []
+    print $ DefiningTypes.safeSecond [1,2,3,4,5]
+    print $ DefiningTypes.tidySecond [1,2,3,4,5]
 
