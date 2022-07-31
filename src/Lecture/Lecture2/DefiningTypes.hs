@@ -1,4 +1,6 @@
 module Lecture.Lecture2.DefiningTypes where
+
+import qualified Data.List as L
     
 data BookInfo = Book Int String [String]
                 deriving (Show)
@@ -234,3 +236,31 @@ toPalindrome xs = xs ++ reverse xs
 
 isPalindrome :: String -> Bool
 isPalindrome word = word == reverse word 
+
+sortListOfList :: [[a]] -> [[a]]
+sortListOfList = L.sortBy (\a b -> compare  ( length a ) ( length b ))
+
+-- intersperse' :: a -> [a] -> [a]
+-- intersperse' _ [] = []
+-- intersperse' n [xs,ys] = concat $ L.intersperse n [ys]
+
+treeHeight :: Tree a -> Int
+treeHeight Empty = 0
+treeHeight ( Node a l r ) =  let leftTree = 1 + treeHeight l
+                                 rightTree = 1 + treeHeight r
+                             in if rightTree > leftTree
+                                then rightTree
+                                else leftTree
+
+type Point = (Double, Double)
+data Direction = Left | Right | Straight
+
+-- direction :: Point -> Point -> Point -> Direction
+-- direction (x1, y1) (x2, y2) (x3, y3)
+--   | vectorA - vectorB == 0 = Straight  
+--     where vectorA = (x1 - x2, y1 - y2)
+--           vectorB = (x2 - x3, y2 - y3)
+           
+
+
+

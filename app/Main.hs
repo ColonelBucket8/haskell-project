@@ -171,3 +171,6 @@ main = do
     print $ DefiningTypes.toPalindrome [1,2,3,4,5]
     print $ DefiningTypes.splitHalf [1,2,3,4,5]
     print $ DefiningTypes.isPalindrome "liil" 
+    print $ DefiningTypes.sortListOfList [[1,2,3,4], [1,2,3], [1,2]]
+    -- print $ DefiningTypes.intersperse' "," ["foo", "bar", "lul"]
+    print $ DefiningTypes.treeHeight treeEx 
