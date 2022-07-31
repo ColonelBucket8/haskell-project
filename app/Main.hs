@@ -53,7 +53,7 @@ import LearnYouAHaskell.ForAFewMonadsMore.TastefulStateful as TastefulStateful
 import LearnYouAHaskell.ForAFewMonadsMore.ErrorOnTheWall as ErrorOnTheWall
 
 import Homework.Homework1
-import Homework.Homework2.LogAnalysis
+import Homework.Homework2.LogAnalysis as LogAnalysis
 
 main :: IO ()
 -- main = forever $ do 
@@ -174,3 +174,5 @@ main = do
     print $ DefiningTypes.sortListOfList [[1,2,3,4], [1,2,3], [1,2]]
     -- print $ DefiningTypes.intersperse' "," ["foo", "bar", "lul"]
     print $ DefiningTypes.treeHeight treeEx 
+    print $ LogAnalysis.parseMessage "I 6 Completed armadillo processing"
+    print $ LogAnalysis.parseMessage "E 65 8 Bad pickle-flange interaction detected"
