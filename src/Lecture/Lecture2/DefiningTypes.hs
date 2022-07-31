@@ -101,3 +101,33 @@ data CalendarTime = CalendarTime {
     ctTZ                        :: Int,
     ctIsDST                     :: Bool
 }
+
+-- Parameterised Types
+-- data Maybe a = Just a
+--              | Nothing
+
+data List a = Cons a (List a)
+            | Nil
+              deriving (Show)
+
+fromList :: [a] -> List a
+fromList (x:xs) = Cons x (fromList xs)
+fromList []     = Nil
+
+toList :: List a -> [a]
+toList Nil = []
+toList ( Cons x xs )  =  x : (toList xs)
+
+
+
+data Tree a = Node a (Tree a) (Tree a)
+            | Empty
+              deriving (Show)
+
+treeEx :: Tree String
+treeEx = Node "parent" (Node "left child" Empty Empty)
+                       (Node "right child" Empty Empty)
+
+data TreeM a = NodeM a (Maybe (TreeM a)) (Maybe (TreeM a))
+               deriving (Show)
+

@@ -153,3 +153,6 @@ main = do
     print $ TastefulStateful.stackManip [1,2,3]
     -- runState TastefulStateful.stackManip'' [5,6,1,2]
     print $ DefiningTypes.myInfo
+    print $ DefiningTypes.fromList "durian"
+    print $ DefiningTypes.treeEx
+
