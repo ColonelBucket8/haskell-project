@@ -55,6 +55,7 @@ import LearnYouAHaskell.ForAFewMonadsMore.ErrorOnTheWall as ErrorOnTheWall
 import Homework.Homework1
 import Homework.Homework2.LogAnalysis as LogAnalysis
 import Homework.Homework2.Log as Log
+import Homework.Homework3.Golf as Golf
 
 main :: IO ()
 -- main = forever $ do 

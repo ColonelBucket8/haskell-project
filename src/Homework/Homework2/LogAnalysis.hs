@@ -31,13 +31,15 @@ inOrder :: MessageTree -> [LogMessage]
 inOrder Leaf = []
 inOrder (Node l logM r) = inOrder l ++ [logM] ++ inOrder r
 
--- logM :: String
--- logM = ["I 5053 pci_id: con ing!",
---         "I 4681 ehci 0xf43d000:15: regista14: [0xbffff 0xfed nosabled 00-02] Zonseres: brips byted nored)",
---         "W 3654 e8] PGTT ASF! 00f00000003.2: 0x000 - 0000: 00009dbfffec00000: Pround/f1743colled"
---         ]
+whatWentWrong :: [LogMessage] -> [String]
+whatWentWrong (Unknown _:xs) = whatWentWrong xs
+whatWentWrong ((LogMessage _ timestamp message):xs)
+        | timestamp > 50 = message : whatWentWrong xs 
+        | otherwise      = whatWentWrong xs
+                
 
--- main :: IO () 
--- main = do
+
+main :: IO [String] 
+main = do
 --        print $ inOrder . build $ testParse parse 10 "error.log" 
-        -- print $ inOrder . build $ parse logM
+        testWhatWentWrong parse whatWentWrong "error.log"

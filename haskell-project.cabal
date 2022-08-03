@@ -29,6 +29,7 @@ library
       Homework.Homework1
       Homework.Homework2.Log
       Homework.Homework2.LogAnalysis
+      Homework.Homework3.Golf
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
