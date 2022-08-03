@@ -32,6 +32,7 @@ inOrder Leaf = []
 inOrder (Node l logM r) = inOrder l ++ [logM] ++ inOrder r
 
 whatWentWrong :: [LogMessage] -> [String]
+whatWentWrong [] = []
 whatWentWrong (Unknown _:xs) = whatWentWrong xs
 whatWentWrong ((LogMessage _ timestamp message):xs)
         | timestamp > 50 = message : whatWentWrong xs 
