@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.34.7.
 --
 -- see: https://github.com/sol/hpack
 
@@ -68,6 +68,7 @@ library
       LearnYouAHaskell.StartingOut
       LearnYouAHaskell.SyntaxInFunctions
       LearnYouAHaskell.TypesAndTypeclasses
+      Lecture.HigherOrderProgramming
       Lecture.IntroductionToHaskell
       Lecture.Lecture2.AlgebraicDataTypes
       Lecture.Lecture2.DefiningTypes
