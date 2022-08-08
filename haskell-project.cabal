@@ -31,6 +31,10 @@ library
       Homework.Homework2.LogAnalysis
       Homework.Homework3.Golf
       Homework.Homework4.Homework4
+      Homework.Homework5.Calc
+      Homework.Homework5.ExprT
+      Homework.Homework5.Parser
+      Homework.Homework5.StackVM
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
@@ -74,6 +78,7 @@ library
       Lecture.Lecture2.AlgebraicDataTypes
       Lecture.Lecture2.DefiningTypes
       Lecture.Lecture2.TypesAndFunctions
+      Lecture.Polymorphism
       Lib
   other-modules:
       Paths_haskell_project
