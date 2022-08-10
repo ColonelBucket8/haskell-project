@@ -1,17 +1,25 @@
+{-# LANGUAGE TypeSynonymInstances #-}
+{-# LANGUAGE FlexibleInstances #-}
+
 module Homework.Homework5.Calc where
 
-import Homework.Homework5.ExprT
+-- import Homework.Homework5.ExprT
 import Homework.Homework5.Parser
+import Homework.Homework5.StackVM
 
 -- Exercise 1
+data ExprT = Lit Integer 
+           | AddT ExprT ExprT
+           | MulT ExprT ExprT
+
 eval :: ExprT -> Integer
 eval (Lit x) = x 
-eval (Add l r) = eval l + eval r
-eval (Mul l r) = eval l * eval r 
+eval (AddT l r) = eval l + eval r
+eval (MulT l r) = eval l * eval r 
 
 -- Exercise 2
 evalStr :: String -> Maybe Integer
-evalStr str = maybe Nothing (Just . eval) (parseExp Lit Add Mul str)
+evalStr str = maybe Nothing (Just . eval) (parseExp Lit AddT MulT str)
 
 -- Exercise 3
 class Expr a where
@@ -21,8 +29,8 @@ class Expr a where
 
 instance Expr ExprT where
     lit = Lit
-    add = Add
-    mul = Mul 
+    add = AddT
+    mul = MulT
 
 -- Exercise 4
 instance Expr Integer where
@@ -58,11 +66,38 @@ testBool    = testExp :: Maybe Bool
 testMM      = testExp :: Maybe MinMax
 testSat     = testExp :: Maybe Mod7
 
+-- Exercise 5
+instance Expr Program where
+    lit i = [PushI i]
+    add x y = x ++ y ++ [Add]
+    mul x y = x ++ y ++ [Mul]
+
+compile :: String -> Maybe Program
+compile exp = parseExp lit add mul exp :: Maybe Program
+
+-- Exercise 6
+class HasVars a where 
+    var :: String -> a
+
+data VarExprT = LitV Integer 
+              | AddV VarExprT VarExprT
+              | MulV VarExprT VarExprT
+              | Var String
+    
+instance Expr VarExprT where
+    lit = LitV
+    add = AddV
+    mul = MulV
+    
+instance HasVars VarExprT where
+    var = Var
+
 main :: IO ()
 main = do
-    print $ eval (Mul (Add (Lit 2) (Lit 3)) (Lit 4))
+    print $ eval (MulT (AddT (Lit 2) (Lit 3)) (Lit 4))
     print $ evalStr "(2+3)*4"
     print $ testInteger
     print $ testBool
     print $ testMM
     print $ testSat
+    print $ compile "(2+3)*4"
