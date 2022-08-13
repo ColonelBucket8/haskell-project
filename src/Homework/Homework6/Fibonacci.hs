@@ -37,6 +37,23 @@ streamMap f (Stream x xs) = Stream (f x) (streamMap f xs)
 streamFromSeed :: (a -> a) -> a -> Stream a
 streamFromSeed f x = Stream x (streamFromSeed f (f x))
 
+-- Exercise 5
+nats :: Stream Integer
+nats = streamFromSeed (\x -> x + 1) 0 
+
+interleaveStreams :: Stream a -> Stream a -> Stream a
+interleaveStreams (Stream x xs) (Stream y ys) = Stream x (Stream y (interleaveStreams xs ys))
+
+rulerRepeat :: Integer -> Stream Integer
+rulerRepeat 100 = streamRepeat 0
+rulerRepeat i   = interleaveStreams (streamRepeat i) (rulerRepeat (i+1))
+
+ruler :: Stream Integer
+ruler = rulerRepeat 0
+
+fibStream :: Stream Integer
+fibStream = streamFromSeed fib 0 
+
 main :: IO ()
 main = do
     print $ fib 3
@@ -47,3 +64,6 @@ main = do
     print $ streamRepeat 5
     print $ streamMap (\x -> x + 1) $ streamRepeat 8
     print $ streamFromSeed (\x -> x + 1) 6
+    print $ nats
+    print $ ruler
+    print $ fibStream
