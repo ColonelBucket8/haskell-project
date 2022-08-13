@@ -27,7 +27,15 @@ streamToList (Stream x xs) = x : streamToList xs
 instance Show a => Show (Stream a) where
     show = show .take 20 . streamToList
 
+-- Exercise 4
+streamRepeat :: a -> Stream a
+streamRepeat x = Stream x (streamRepeat x)
 
+streamMap :: (a -> b) -> Stream a -> Stream b
+streamMap f (Stream x xs) = Stream (f x) (streamMap f xs)
+
+streamFromSeed :: (a -> a) -> a -> Stream a
+streamFromSeed f x = Stream x (streamFromSeed f (f x))
 
 main :: IO ()
 main = do
@@ -36,3 +44,6 @@ main = do
     print $ fib 7
     -- print $ fibs1
     -- print $ fibs2
+    print $ streamRepeat 5
+    print $ streamMap (\x -> x + 1) $ streamRepeat 8
+    print $ streamFromSeed (\x -> x + 1) 6
