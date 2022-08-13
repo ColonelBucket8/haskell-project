@@ -18,6 +18,16 @@ fibs2Val x y = z : fibs2Val y z
 fibs2 :: [Integer]
 fibs2 = 0 : 1 : fibs2Val 0 1 
 
+-- Exercise 3
+data Stream a = Stream a (Stream a)
+
+streamToList :: Stream a -> [a]
+streamToList (Stream x xs) = x : streamToList xs
+
+instance Show a => Show (Stream a) where
+    show = show .take 20 . streamToList
+
+
 
 main :: IO ()
 main = do
