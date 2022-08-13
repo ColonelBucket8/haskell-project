@@ -35,6 +35,7 @@ library
       Homework.Homework5.ExprT
       Homework.Homework5.Parser
       Homework.Homework5.StackVM
+      Homework.Homework6.Fibonacci
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
