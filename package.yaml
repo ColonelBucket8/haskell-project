@@ -26,6 +26,7 @@ dependencies:
   - random
   - bytestring
   - mtl
+  - array
 
 library:
   source-dirs: src
