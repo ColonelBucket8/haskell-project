@@ -1,3 +1,6 @@
+{-# Language FlexibleInstances #-}
+{-# OPTIONS_GHC -fno-warn-missing-methods #-}
+
 module Homework.Homework6.Fibonacci where
 
 -- Exercise 1
@@ -54,6 +57,22 @@ ruler = rulerRepeat 0
 fibStream :: Stream Integer
 fibStream = streamFromSeed fib 0 
 
+-- Exercise 6
+x :: Stream Integer
+x = Stream 0 (Stream 1 (streamRepeat 0))
+
+instance Num (Stream Integer) where
+    fromInteger i = Stream i (streamRepeat 0)
+    negate = streamMap negate
+    (+) (Stream x xs) (Stream y ys) =  Stream (x + y) (xs + ys)
+    (*) a@(Stream x xs) b@(Stream y ys) = Stream (x * y) (streamMap (*x) ys + (xs * b))
+
+instance Fractional (Stream Integer) where
+    (/) a@(Stream x xs) b@(Stream y ys) = Stream (x `div` y) (streamMap (* (1 `div` y)) (xs - a/b * ys) )
+
+fibs3 :: Stream Integer
+fibs3 = Stream 0 (fromInteger 1) / Stream 1 (Stream (-1) (Stream (-1) (streamRepeat 0)))
+
 main :: IO ()
 main = do
     print $ fib 3
@@ -67,3 +86,8 @@ main = do
     print $ nats
     print $ ruler
     print $ fibStream
+    print $ x^4
+    print $ (1 + x)^5
+    print $ x + x
+    print $ x / (Stream 4 (streamFromSeed (+1) 4) )
+    print $ fibs3
