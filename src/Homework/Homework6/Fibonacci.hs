@@ -73,6 +73,19 @@ instance Fractional (Stream Integer) where
 fibs3 :: Stream Integer
 fibs3 = Stream 0 (fromInteger 1) / Stream 1 (Stream (-1) (Stream (-1) (streamRepeat 0)))
 
+-- Exercise 7
+data Matrix = Matrix Integer Integer Integer Integer
+
+instance Num Matrix where
+    (*) (Matrix a11 a12 a21 a22) (Matrix b11 b12 b21 b22) = Matrix (a11*b11 + a12*b21) (a11*b12+a12*b22) (a21*b11 + a22*b21) (a21*b12 + a22*b22)
+
+f_n :: Matrix
+f_n = Matrix 1 1 1 0
+
+fib4 :: Integer -> Integer
+fib4 0 = 0
+fib4 x = a where (Matrix _ a _ _)  = f_n ^ x
+
 main :: IO ()
 main = do
     print $ fib 3
@@ -91,3 +104,4 @@ main = do
     print $ x + x
     print $ x / (Stream 4 (streamFromSeed (+1) 4) )
     print $ fibs3
+    print $ fib4 10000000
