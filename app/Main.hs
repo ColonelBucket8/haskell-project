@@ -12,6 +12,7 @@ import Lecture.IntroductionToHaskell
 import Lecture.Lecture2.AlgebraicDataTypes
 import Lecture.Lecture2.TypesAndFunctions as TypesAndFunctions
 import Lecture.Lecture2.DefiningTypes as DefiningTypes 
+import Lecture.Lecture7.Monoids as Mon 
 
 import LearnYouAHaskell.StartingOut as Starting
 import LearnYouAHaskell.TypesAndTypeclasses as Types
