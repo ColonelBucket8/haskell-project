@@ -80,6 +80,7 @@ library
       Lecture.Lecture2.AlgebraicDataTypes
       Lecture.Lecture2.DefiningTypes
       Lecture.Lecture2.TypesAndFunctions
+      Lecture.Lecture7.Fold
       Lecture.Lecture7.Monoids
       Lecture.Polymorphism
       Lib
