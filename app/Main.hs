@@ -14,6 +14,7 @@ import Lecture.Lecture2.TypesAndFunctions as TypesAndFunctions
 import Lecture.Lecture2.DefiningTypes as DefiningTypes 
 import Lecture.Lecture7.Monoids as Mon 
 import Lecture.Lecture7.MonoidsAndFingerTrees as Finger
+import Lecture.Lecture7.HaskellMonoidsAndTheirUses as Uses
 
 import LearnYouAHaskell.StartingOut as Starting
 import LearnYouAHaskell.TypesAndTypeclasses as Types
