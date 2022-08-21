@@ -1,3 +1,6 @@
+
+{-# LANGUAGE FlexibleContexts #-}
+
 module Lecture.Lecture7.HaskellMonoidsAndTheirUses where
 
 import Data.Monoid
@@ -71,10 +74,49 @@ fact4 n = do
     tell (Any (r==120))
     return r
 
+-- Commutative Monoids, Non-Commutative Monoids and Dual Monoids
+fact5 :: Integer -> Writer (Dual String) Integer
+fact5 0 = return 1
+fact5 n = do
+    let n' = n-1
+    tell $ Dual $ "We've taken one away from " ++ show n ++ "\n"
+    m <- fact5 n'
+    tell $ Dual $ "We've called f " ++ show m ++ "\n"
+    let r = n*m
+    tell $ Dual $ "We've multiplied " ++ show n ++ " and " ++ show m ++ "\n"
+    return r
+
+-- The Product Monoid
+-- instance (Monoid a, Monoid b) => Monoid (a,b) where
+--     mempty = (mempty, mempty)
+--     mappend (u,v) (w,x) = (u `mappend` w, v `mappend` x)
+
+-- tellFst :: (Monoid a, Monoid b) => a -> WriterT a b
+tellFst :: (MonadWriter (a, b) m, Monoid b) => a -> m ()
+tellFst a = tell $ (a, mempty)  
+
+tellSnd :: (MonadWriter (a, b) m, Monoid a) => b -> m ()
+tellSnd a = tell $ (mempty, a)
+
+fact6 :: Integer -> Writer (String, Sum Integer) Integer
+fact6 0 = return 1
+fact6 n = do
+    let n' = n - 1
+    tellSnd (Sum 1)
+    tellFst $ "We've taken one away from " ++ show n ++ "\n"
+    m <- fact6 n'
+    let r = n*m
+    tellSnd (Sum 1)
+    tellFst $ "We've multiplied " ++ show n ++ " and " ++ show m ++ "\n"
+    return r
+
 main :: IO ()
 main = do
     print $ runWriter (fact1 10)
     print $ runWriter (fact2 10)
     print $ runState (fact3 10) 0
     print $ runWriter (fact4 10)
+    print $ runWriter (fact5 10)
+    print $ runWriter (fact6 10)
+
 
