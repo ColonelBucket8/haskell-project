@@ -110,6 +110,20 @@ fact6 n = do
     tellFst $ "We've multiplied " ++ show n ++ " and " ++ show m ++ "\n"
     return r
 
+-- Foldable Data
+data Tree a = Empty
+            | Leaf a
+            | Node (Tree a) a (Tree a)
+
+instance Foldable Tree where
+    foldMap f Empty = mempty
+    foldMap f (Leaf x) = f x
+    foldMap f (Node l x r) = foldMap f l `mappend` f x `mappend` foldMap f r
+
+tree :: (Num a) => Tree a
+tree = Node (Leaf 1) 7 (Leaf 2)
+
+
 main :: IO ()
 main = do
     print $ runWriter (fact1 10)
@@ -118,5 +132,5 @@ main = do
     print $ runWriter (fact4 10)
     print $ runWriter (fact5 10)
     print $ runWriter (fact6 10)
-
-
+    print $ foldMap (Any . (== 1)) tree
+    print $ foldMap (All . (> 5)) tree
