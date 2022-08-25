@@ -36,6 +36,13 @@ library
       Homework.Homework5.Parser
       Homework.Homework5.StackVM
       Homework.Homework6.Fibonacci
+      Homework.Homework7.Buffer
+      Homework.Homework7.Editor
+      Homework.Homework7.JoinList
+      Homework.Homework7.Scrabble
+      Homework.Homework7.Sized
+      Homework.Homework7.StringBufEditor
+      Homework.Homework7.StringBuffer
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
