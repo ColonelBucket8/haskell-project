@@ -67,3 +67,7 @@ takeJ n jl@(Append m jl1 jl2)
 --Exercise 3
 scoreLine :: String -> JoinList Score String
 scoreLine str = Single (scoreString str) str
+
+main :: IO ()
+main = do
+  print $ scoreLine "test and 2" +++ scoreLine "test 4 and 2"
