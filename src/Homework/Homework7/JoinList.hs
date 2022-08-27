@@ -1,6 +1,7 @@
 module Homework.Homework7.JoinList where
 
 import Homework.Homework7.Sized
+import Homework.Homework7.Scrabble
 
 -- data JoinListBasic a = Empty
 --                      | Single a
@@ -41,5 +42,28 @@ indexJ i (Append m jl1 jl2)
           | i < (getSize . size) m = indexJ (i - lcount) jl2
           where lcount = count jl1
 indexJ _ _ = Nothing
+
+dropJ :: (Sized b, Monoid b) => Int -> JoinList b a -> JoinList b a
+dropJ _ Empty = Empty
+dropJ 0 jl1 = jl1
+dropJ n (Single _ _) = Empty
+drop n jl@(Append m jl1 jl2)
+          | count jl <= n = Empty
+          | lcount <= n   = dropJ (n-lcount) jl2
+          | lcount > n    = (dropJ n jl1) +++ jl2
+          where lcount = count jl1
           
-                  
+takeJ :: (Sized b, Monoid b) => Int -> JoinList b a -> JoinList b a
+takeJ _ Empty = Empty
+takeJ 0 _ = Empty
+takeJ n jl@(Single _ _) = jl
+takeJ n jl@(Append m jl1 jl2) 
+          | count jl <= n = jl
+          | lcount < n    = jl1 +++ takeJ (n-lcount) jl2
+          | lcount == n   = jl1
+          | lcount > n    = takeJ n jl1
+          where lcount = count jl1 
+
+--Exercise 3
+scoreLine :: String -> JoinList Score String
+scoreLine str = Single (scoreString str) str
