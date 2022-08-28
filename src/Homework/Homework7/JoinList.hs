@@ -1,5 +1,6 @@
 module Homework.Homework7.JoinList where
 
+import Homework.Homework7.Buffer
 import Homework.Homework7.Sized
 import Homework.Homework7.Scrabble
 
@@ -67,6 +68,11 @@ takeJ n jl@(Append m jl1 jl2)
 --Exercise 3
 scoreLine :: String -> JoinList Score String
 scoreLine str = Single (scoreString str) str
+
+-- Exercise 4
+-- instance (Monoid a, Monoid b) => Monoid (a,b) where
+  -- mempty = (mempty, mempty)
+  -- mappend (a1,b1) (a2,b2) = (mappend a1 a2, mappend b1 b2)
 
 main :: IO ()
 main = do
