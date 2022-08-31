@@ -98,6 +98,7 @@ library
       Lecture.Lecture8.GetContents
       Lecture.Lecture8.InputAndOutput
       Lecture.Lecture8.LessThan
+      Lecture.Lecture8.Palindromes
       Lecture.Lecture8.Reverse
       Lecture.Polymorphism
       Lib
