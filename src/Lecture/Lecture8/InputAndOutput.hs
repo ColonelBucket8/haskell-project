@@ -1,6 +1,7 @@
 module Lecture.Lecture8.InputAndOutput where
      
 import Data.Char
+import System.IO
 
 -- Hello world
 main :: IO ()
@@ -30,6 +31,23 @@ main = do
     mapM print [1,2,3]
     -- discard result
     mapM_ print [1,2,3]
+    -- handle IO
+    handle <- openFile "girlfriend.txt" ReadMode
+    contents <- hGetContents handle
+    putStr contents
+    hClose handle
+    -- withFile
+    withFile "girlfriend.txt" ReadMode (\handle -> do
+        contetns <- hGetContents handle
+        putStr contents
+        )
+    -- readFile
+    contents <- readFile "girlfriend.txt"
+    putStr contents
+    -- writeFile
+    contents <- readFile "girlfriend.txt"
+    writeFile "girlfriendcaps.txt" (map toUpper contents)
+
 
 -- putStr :: String -> IO ()
 -- putStr [] = return ()
@@ -38,4 +56,14 @@ main = do
 --     putStr xs
             
 -- print = putStrLn . show
+-- type FilePath = String
+-- data IOMode = ReadMode | WriteMode | AppendMode | ReadWriteMode
+-- withFile :: FilePath -> IOMode -> (Handle -> IO a) -> IO a
+
+withFile' :: FilePath -> IOMode -> (Handle -> IO a) -> IO a
+withFile' path mode f = do
+        handle <- openFile path mode
+        result <- f handle
+        hClose handle
+        return result
 
