@@ -93,8 +93,11 @@ library
       Lecture.Lecture7.Monoids
       Lecture.Lecture7.MonoidsAndFingerTrees
       Lecture.Lecture8.Forever
+      Lecture.Lecture8.ForMTest
       Lecture.Lecture8.GetCharTest
+      Lecture.Lecture8.GetContents
       Lecture.Lecture8.InputAndOutput
+      Lecture.Lecture8.LessThan
       Lecture.Lecture8.Reverse
       Lecture.Polymorphism
       Lib

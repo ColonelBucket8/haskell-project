@@ -26,6 +26,10 @@ main = do
     print [a,b,c]
     rs <- sequence [getLine, getLine, getLine]
     print rs
+    -- return result
+    mapM print [1,2,3]
+    -- discard result
+    mapM_ print [1,2,3]
 
 -- putStr :: String -> IO ()
 -- putStr [] = return ()
