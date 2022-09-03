@@ -4,7 +4,5 @@ import Data.Char
 
 main :: IO ()
 main = do
-        contents <- getContents 
-        putStrLn $ map toUpper contents
-
-
+  contents <- getContents
+  putStrLn $ map toUpper contents

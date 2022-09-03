@@ -69,7 +69,7 @@ lengthCompareWithVowel x y = (length x `compare` length y) `mappend`
 
 newtype First a = First { getFirst :: Maybe a }
     deriving (Eq, Ord, Read, Show)
-    
+
 -- instance Monoid (First a) where
 --     mempty = First Nothing
 --     First (Just x) `mappend` _ = First (Just x)
@@ -79,7 +79,7 @@ newtype First a = First { getFirst :: Maybe a }
 data Tree a = Empty | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
 
 -- foldMap :: (Monoid M, Foldable t) => (a -> m) -> t a -> m
-
+ 
 instance F.Foldable Tree where
     foldMap f Empty = mempty
     foldMap f (Node x l r) = F.foldMap f l `mappend`

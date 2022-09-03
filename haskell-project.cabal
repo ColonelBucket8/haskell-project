@@ -92,6 +92,7 @@ library
       Lecture.Lecture7.HaskellMonoidsAndTheirUses
       Lecture.Lecture7.Monoids
       Lecture.Lecture7.MonoidsAndFingerTrees
+      Lecture.Lecture8.AppendTodo
       Lecture.Lecture8.Forever
       Lecture.Lecture8.ForMTest
       Lecture.Lecture8.GetCharTest
@@ -99,8 +100,8 @@ library
       Lecture.Lecture8.InputAndOutput
       Lecture.Lecture8.LessThan
       Lecture.Lecture8.Palindromes
+      Lecture.Lecture8.RemoveTodo
       Lecture.Lecture8.Reverse
-      Lecture.Lecture8.Todo
       Lecture.Polymorphism
       Lib
   other-modules:
