@@ -9,6 +9,9 @@ main = do
     putStrLn "Enter a file path: "
     filePath <- getLine 
     handle <- openFile filePath ReadMode
+    -- openTempFile :: FilePath  -- Directory in which to create the file
+    --              -> String    -- File name template
+    --              -> IO (FilePath, Handle)
     (tempName, tempHandle) <- openTempFile "." "temp"
     contents <- hGetContents handle
     let todoTasks = lines contents
