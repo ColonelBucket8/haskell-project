@@ -95,6 +95,7 @@ library
       Lecture.Lecture8.AppendTodo
       Lecture.Lecture8.Forever
       Lecture.Lecture8.ForMTest
+      Lecture.Lecture8.GetArgs
       Lecture.Lecture8.GetCharTest
       Lecture.Lecture8.GetContents
       Lecture.Lecture8.InputAndOutput
@@ -102,6 +103,7 @@ library
       Lecture.Lecture8.Palindromes
       Lecture.Lecture8.RemoveTodo
       Lecture.Lecture8.Reverse
+      Lecture.Lecture8.Todo
       Lecture.Polymorphism
       Lib
   other-modules:
