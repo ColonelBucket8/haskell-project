@@ -48,7 +48,6 @@ main = do
     contents <- readFile "girlfriend.txt"
     writeFile "girlfriendcaps.txt" (map toUpper contents)
 
-
 -- putStr :: String -> IO ()
 -- putStr [] = return ()
 -- putStr (x:xs) = do
