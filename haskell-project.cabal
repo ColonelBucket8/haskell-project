@@ -93,6 +93,7 @@ library
       Lecture.Lecture7.Monoids
       Lecture.Lecture7.MonoidsAndFingerTrees
       Lecture.Lecture8.AppendTodo
+      Lecture.Lecture8.CopyFile
       Lecture.Lecture8.Forever
       Lecture.Lecture8.ForMTest
       Lecture.Lecture8.GetArgs
