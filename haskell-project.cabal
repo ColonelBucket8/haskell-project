@@ -93,6 +93,7 @@ library
       Lecture.Lecture7.Monoids
       Lecture.Lecture7.MonoidsAndFingerTrees
       Lecture.Lecture8.AppendTodo
+      Lecture.Lecture8.Catch
       Lecture.Lecture8.CopyFile
       Lecture.Lecture8.Forever
       Lecture.Lecture8.ForMTest
@@ -106,6 +107,7 @@ library
       Lecture.Lecture8.RandomChars
       Lecture.Lecture8.RemoveTodo
       Lecture.Lecture8.Reverse
+      Lecture.Lecture8.ShowLength
       Lecture.Lecture8.ThreeCoins
       Lecture.Lecture8.Todo
       Lecture.Polymorphism
