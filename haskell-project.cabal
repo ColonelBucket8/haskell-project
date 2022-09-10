@@ -43,6 +43,8 @@ library
       Homework.Homework7.Sized
       Homework.Homework7.StringBufEditor
       Homework.Homework7.StringBuffer
+      Homework.Homework8.Employee
+      Homework.Homework8.Party
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
