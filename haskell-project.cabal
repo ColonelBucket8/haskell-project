@@ -103,6 +103,7 @@ library
       Lecture.Lecture8.GuessNumber
       Lecture.Lecture8.InputAndOutput
       Lecture.Lecture8.InputMonad
+      Lecture.Lecture8.IO
       Lecture.Lecture8.LessThan
       Lecture.Lecture8.Palindromes
       Lecture.Lecture8.RandomChars
