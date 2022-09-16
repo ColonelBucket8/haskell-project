@@ -115,6 +115,9 @@ library
       Lecture.Lecture8.TemporaryFiles
       Lecture.Lecture8.ThreeCoins
       Lecture.Lecture8.Todo
+      Lecture.Lecture9.TheFunctorTypeclass
+      Lecture.Lecture9.Typeclassopedia
+      Lecture.Lecture9.Functors
       Lecture.Polymorphism
       Lib
   other-modules:
