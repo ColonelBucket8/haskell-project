@@ -45,5 +45,5 @@ data Funny f a = Funny a (f a)
 -- fmap :: (a -> b) -> (->) e a -> (->) e b
 -- -- with (->) written infix
 -- fmap :: (a -> b) -> (e -> a) -> (e -> b)
-instance Functor ((->) e) where
-    fmap = (.)
+-- instance Functor ((->) e) where
+--     fmap = (.)
