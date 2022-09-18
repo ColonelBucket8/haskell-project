@@ -9,5 +9,32 @@ module Lecture.Lecture10.ApplicativeFunctors where
 --   Nothing <*> _ = Nothing
 --   (Just f) <*> something = fmap f something
 
-(<$>) :: (Functor f) => (a -> b) -> f a -> f b
-f <$> x = fmap f x
+-- (<$>) :: (Functor f) => (a -> b) -> f a -> f b
+-- f <$> x = fmap f x
+
+-- instance Applicative [] where 
+--     pure x = [x]
+--     fs <*> xs = [f x | f <- fs, x <- xs]
+
+-- instance Applicative IO where
+--     pure = return
+--     a <*> b = do
+--         f <- a
+--         x <- b
+--         return (f x)
+
+myAction :: IO String
+myAction = do
+    a <- getLine
+    b <- getLine
+    return $ a ++ b
+
+myAction' :: IO String
+myAction' = (++) <$> getLine <*> getLine
+
+main :: IO ()
+main = do
+    print $ filter (>50) $ (*) <$> [2,5,10] <*> [8,10,11]
+
+
+
