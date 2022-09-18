@@ -118,6 +118,7 @@ library
       Lecture.Lecture9.TheFunctorTypeclass
       Lecture.Lecture9.Typeclassopedia
       Lecture.Lecture9.Functors
+      Lecture.Lecture10.ApplicativeFunctors
       Lecture.Polymorphism
       Lib
   other-modules:

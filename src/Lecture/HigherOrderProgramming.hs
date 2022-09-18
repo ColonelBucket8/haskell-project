@@ -2,7 +2,7 @@ module Lecture.HigherOrderProgramming where
      
 greaterThan100 :: [Integer] -> [Integer]
 greaterThan100 = filter (\x -> x > 100) 
-    
+
 greaterThan100_2 :: [Integer] -> [Integer]
 greaterThan100_2 = filter (>100)
 
