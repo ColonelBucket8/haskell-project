@@ -4,7 +4,7 @@
 
 module Homework.Homework10.AParser where
 
-import           Control.Applicative
+import           Control.Applicative()
 
 import           Data.Char
 
