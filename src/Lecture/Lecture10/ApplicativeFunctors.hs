@@ -1,5 +1,7 @@
 module Lecture.Lecture10.ApplicativeFunctors where
 
+import Control.Applicative
+
 -- class (Functor f) => Applicative f where
 --   pure :: a -> f a
 --   (<*>) :: f (a -> b) -> f a -> f b
@@ -32,9 +34,21 @@ myAction = do
 myAction' :: IO String
 myAction' = (++) <$> getLine <*> getLine
 
+-- instance Applicative ((->) r) where
+--     pure x = (\_ -> x)
+--     f <*> g = \x -> f x (g x)
+
+-- instance Applicative ZipList where
+--     pure x = ZipList (repeat x)
+--     ZipList fs <*> ZipList xs = ZipList (zipWith (\f x -> f x) fs xs)
+
+-- sequenceA :: (Applicative f) => [f a] -> f [a]
+-- sequenceA [] = pure []
+-- sequenceA (x:xs) = (:) <$> x <*> sequenceA xs
+
+sequenceA :: (Applicative f) => [f a] -> f [a]
+sequenceA = foldr (liftA2 (:)) (pure [])
+
 main :: IO ()
 main = do
-    print $ filter (>50) $ (*) <$> [2,5,10] <*> [8,10,11]
-
-
-
+   print $ filter (>50) $ (*) <$> [2,5,10] <*> [8,10,11]
