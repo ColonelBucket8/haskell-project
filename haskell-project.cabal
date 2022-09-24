@@ -45,6 +45,7 @@ library
       Homework.Homework7.StringBuffer
       Homework.Homework8.Employee
       Homework.Homework8.Party
+      Homework.Homework10.AParser
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
