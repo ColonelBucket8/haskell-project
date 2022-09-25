@@ -85,6 +85,21 @@ abParser_ = (\_ _ -> ()) <$> char 'a' <*> char 'b'
 intPair :: Parser [Integer]
 intPair = (\a _ c -> [a, c]) <$> posInt <*> char ' ' <*> posInt
 
+-- Exercise 4
+-- (<\>) is intended to represent choice: that is,
+-- f1 <|> f2 represents a choice between f1 and f2
+class Applicative f => Alternative f where
+  empty :: f a
+  (<|>) :: f a -> f a -> f a
+
+-- instance Alternative Parser where
+--   empty  = Parser (const Nothing)
+--   p1 <|> p2 = Parser (\xs -> runParser p1 xs <|> runParser p2 xs)
+
+-- Exercise 5 
+-- int0rUppercase :: Parser ()
+-- int0rUppercase = (const () <$> satisfy isUpper) <|> (const () <$> posInt)
+
 main :: IO ()
 main = do
   print $ runParser abParser "abcdef"
@@ -92,3 +107,6 @@ main = do
   print $ runParser abParser_ "abcdef"
   print $ runParser abParser_ "acdef"
   print $ runParser intPair "12 34 56"
+  -- print $ runParser int0rUppercase "ASDabcdef"
+  -- print $ runParser int0rUppercase "1231231acdef"
+  -- print $ runParser int0rUppercase "acdef"
