@@ -121,6 +121,7 @@ library
       Lecture.Lecture9.Functors
       Lecture.Lecture10.ApplicativeFunctors
       Lecture.Lecture10.ApplicativeFunctorsPart1
+      Lecture.Lecture11.ApplicativeFunctorsPart2
       Lecture.Polymorphism
       Lib
   other-modules:

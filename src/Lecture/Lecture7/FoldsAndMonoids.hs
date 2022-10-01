@@ -6,7 +6,7 @@ data Tree a = Empty
 
 leaf :: a -> Tree a
 leaf x = Node Empty x Empty
-
+   
 treeSize :: Tree a -> Integer
 treeSize Empty = 0
 treeSize (Node l x r) = 1 + treeSize l + treeSize r
