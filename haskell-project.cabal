@@ -46,6 +46,8 @@ library
       Homework.Homework8.Employee
       Homework.Homework8.Party
       Homework.Homework10.AParser
+      Homework.Homework11.SExpr
+      Homework.Homework11.AParser
       LearnYouAHaskell.AFistfulOfMonads.DoNotation
       LearnYouAHaskell.AFistfulOfMonads.GettingOurFeetWetWithMaybe
       LearnYouAHaskell.AFistfulOfMonads.MonadLaws
